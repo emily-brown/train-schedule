@@ -10,9 +10,12 @@
 
     <title>Train Schedule</title>
 
-    <!-- Bootstrap -->
+    <!-- Style sheets -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
+    <!-- Connect Jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!-- Firebase References -->
@@ -37,7 +40,7 @@
     <div class="row">
         <div class="col-sm-12">
             <!-- Train Schedule-->
-            <div class="card mb-4">
+            <div class="card mb-4" id="schedule">
                 <div class="card-header">Train Schedule</div>
                 <div class="card-body">
                     <table class="table table-sm table-hover" id='train-table'>
@@ -61,7 +64,7 @@
     <div class="row">
         <div class="col-sm-12">
             <!-- Add Employee  -->
-            <div class="card mb-4">
+            <div class="card mb-4" id="addTrain">
                 <div class="card-header">Add Train</div>
                 <div class="card-body">
                     <!-- Entry Form -->

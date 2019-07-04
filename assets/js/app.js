@@ -65,9 +65,7 @@ database.ref().on("child_added", function (childSnapshot) {
     // Make the time come out in proper military format in table once user hits "submit"
     let firstTrainTime = moment.unix(firstTrain).format("HH:mm A");
 
-    //Declaring the current time
-
-    // Create minutes away variable 
+    // Create minutes away logic
 
     // Assumptions
     var tFrequency = frequency;

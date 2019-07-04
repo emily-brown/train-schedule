@@ -1,0 +1,20 @@
+body {
+    background-image: url("../images/train.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border-image-repeat: no-repeat;
+}
+
+#schedule {
+    width: 70%;
+    margin: auto;
+    opacity: 0.5;
+}
+
+#addTrain {
+    width: 70%;
+    margin: auto;
+    opacity: 0.5;
+}
