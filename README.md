@@ -1,6 +1,6 @@
 # train-schedule
 
-### Link to Live Site: 
+### Link to Live Site: https://emily-brown.github.io/train-schedule/
 
 ## Site Objective: 
 Using the "Add Train" form, user can input a train name, destination, frequency and departure time to be added to the train schedule and is captured in Firebase.   
