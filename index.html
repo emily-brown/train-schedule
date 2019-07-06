@@ -1,22 +1,22 @@
-<!DOCTYPE html>
-
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
     <title>Train Schedule</title>
 
-    <!-- Style sheets -->
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="reset.css">
 
-    <!-- Connect Jquery -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
 
     <!-- Firebase References -->
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
@@ -27,30 +27,35 @@
 
 </head>
 
+
 <body>
 
-    <!-- Title -->
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <h1 class="display-4">Train Schedule</h1>
-            <p class="lead">Let's get going places!</p>
+    <nav class="navbar fixed-top">
+        <a class="navbar-brand" href="https://emily-brown.github.io/bootstrap-portfolio/portfolio.html">&#8592; Back to Portfolio</a>
+    </nav>
+
+    <div class="row">
+        <div class="col-sm-12 text-center">
+            <h1>Train Schedule</h1>
         </div>
     </div>
 
     <div class="row">
+
         <div class="col-sm-12">
+
             <!-- Train Schedule-->
             <div class="card mb-4" id="schedule">
-                <div class="card-header">Train Schedule</div>
+                <div class="card-header">All the places you'll go...</div>
                 <div class="card-body">
                     <table class="table table-sm table-hover" id='train-table'>
                         <thead>
                             <tr>
                                 <th scope="col">Train Name</th>
                                 <th scope="col">Destination</th>
-                                <th scope="col">Frequency (min)</th>
+                                <th scope="col">Frequency (mins)</th>
                                 <th scope="col">Next Arrival</th>
-                                <th scope="col">Minutes Away</th>
+                                <th scope="col">Arrival of Next Train (mins)</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -67,6 +72,7 @@
             <div class="card mb-4" id="addTrain">
                 <div class="card-header">Add Train</div>
                 <div class="card-body">
+
                     <!-- Entry Form -->
                     <form>
                         <div class="form-group">
@@ -82,7 +88,7 @@
                             <input class="form-control" id="time-input" type="text">
                         </div>
                         <div class="form-group">
-                            <label for="frequency-input">Frequency (min)</label>
+                            <label for="frequency-input">Frequency (mins)</label>
                             <input class="form-control" id="frequency-input" type="text">
                         </div>
                         <button class="btn btn-primary float-right" id="add-train-btn">Submit</button>
@@ -93,10 +99,9 @@
         </div>
     </div>
 
+
     <script src="assets/js/app.js"></script>
 
 </body>
-
-
 
 </html>
