@@ -10,11 +10,62 @@ body {
 #schedule {
     width: 70%;
     margin: auto;
-    opacity: 0.5;
+    background: rgb(255,255,255, 0.7);
 }
 
 #addTrain {
     width: 70%;
     margin: auto;
-    opacity: 0.5;
+    background: rgb(255,255,255, 0.7);
+}
+
+.navbar-brand {
+    font-family: 'Amatic SC', Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    color: white;
+    font-weight: bold;
+}
+
+.navbar-brand:hover {
+    color: rgb(0,100,0);
+}
+
+h1 {
+    font-family: 'Amatic SC', Arial, Helvetica, sans-serif;
+    font-size: 7em;
+    color: white;
+}
+
+.card-header {
+    font-family: 'Amatic SC', Arial, Helvetica, sans-serif;
+    font-size: 3em;
+}
+
+th {
+    font-family: 'Amatic SC', Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+tbody {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+label {
+    font-family: 'Amatic SC', Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#add-train-btn {
+    background-color: black;
+    font-family: 'Amatic SC', Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    border: none;
+}
+
+#add-train-btn:hover {
+    background-color: rgb(0,100,0)
 }
