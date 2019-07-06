@@ -1,5 +1,5 @@
 // Call Firebase with personalized API key 
-var firebaseConfig = {
+let firebaseConfig = {
     apiKey: "AIzaSyAj03l4NFItYrT2Mr2sp2RfU94slxJF-t8",
     authDomain: "trainschedule-82916.firebaseapp.com",
     databaseURL: "https://trainschedule-82916.firebaseio.com",
@@ -42,7 +42,7 @@ $("#add-train-btn").on("click", function (event) {
     console.log(newTrain.firstTrain);
     console.log(newTrain.frequency);
 
-    // Clear user input fields 
+    // Clear user input fields after submission 
     $("#train-name-input").val("");
     $("#destination-input").val("");
     $("#time-input").val("");
@@ -53,7 +53,7 @@ $("#add-train-btn").on("click", function (event) {
 database.ref().on("child_added", function (childSnapshot) {
     console.log(childSnapshot.val());
 
-    // Store everything into a variable 
+    // Store everything into a letiable 
 
     let trainName = childSnapshot.val().train;
     let destination = childSnapshot.val().destination;
@@ -63,43 +63,41 @@ database.ref().on("child_added", function (childSnapshot) {
     // Make the time come out in proper military format in table once user hits "submit"
     let firstTrainTime = moment.unix(firstTrain).format("HH:mm A");
 
-    //Declaring the current time
-
-    // Create minutes away variable 
+    // Create minutes away function and next train arrival time
 
     // Assumptions
-    var tFrequency = frequency;
+    let tFrequency = frequency;
 
-    // Time is 3:30 AM
-    var firstTime = 0;
+    let firstTime = 0;
 
     // First Time (pushed back 1 year to make sure it comes before current time)
-    var firstTimeConverted = moment(firstTime, "HH:mm A").subtract(1, "years");
+    let firstTimeConverted = moment(firstTime, "HH:mm A").subtract(1, "years");
     console.log(firstTimeConverted);
 
     // Current Time
-    var currentTime = moment();
+    let currentTime = moment();
     console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm A"));
 
     // Difference between the times
-    var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
+    let diffTime = moment().diff(moment(firstTimeConverted), "minutes");
     console.log("DIFFERENCE IN TIME: " + diffTime);
 
     // Time apart (remainder)
-    var tRemainder = diffTime % tFrequency;
+    let tRemainder = diffTime % tFrequency;
     console.log(tRemainder);
 
     // Minute Until Train
-    var tMinutesTillTrain = tFrequency - tRemainder;
+    let tMinutesTillTrain = tFrequency - tRemainder;
     console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
 
     // Next Train
-    var nextTrain = moment().add(tMinutesTillTrain, "minutes");
+    let nextTrain = moment().add(tMinutesTillTrain, "minutes");
     console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm A"));
+
+    // Format next train time to miliary time and indicate am or pm
     let catchTrain = moment(nextTrain).format("hh:mm A");
 
-
-    // Create new row
+    // Create new row on train schedule after user input 
     let newRow = $("<tr>").append(
         $("<td>").text(trainName),
         $("<td>").text(destination),

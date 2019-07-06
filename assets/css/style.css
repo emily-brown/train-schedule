@@ -1,3 +1,4 @@
+/* Background style */
 body {
     background-image: url("../images/train.jpg");
     -webkit-background-size: cover;
@@ -6,6 +7,8 @@ body {
     background-size: cover;
     border-image-repeat: no-repeat;
 }
+
+/* Table styling and formatting */
 
 #schedule {
     width: 70%;
@@ -19,6 +22,8 @@ body {
     background: rgb(255,255,255, 0.7);
 }
 
+/* Navbar styling  */
+
 .navbar-brand {
     font-family: 'Amatic SC', Arial, Helvetica, sans-serif;
     font-size: 1.5em;
@@ -30,6 +35,8 @@ body {
     color: rgb(0,100,0);
 }
 
+/* Title styling */
+
 h1 {
     font-family: 'Amatic SC', Arial, Helvetica, sans-serif;
     font-size: 7em;
@@ -40,6 +47,8 @@ h1 {
     font-family: 'Amatic SC', Arial, Helvetica, sans-serif;
     font-size: 3em;
 }
+
+/* Table font styling */
 
 th {
     font-family: 'Amatic SC', Arial, Helvetica, sans-serif;
